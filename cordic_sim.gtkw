@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Jul 27 15:33:56 2019
+[*]
+[dumpfile] "/home/ericson/Dropbox/MAESTRIA/MSE/bim3/SDC/cocotb_cordic/cordic_tb.vcd"
+[dumpfile_mtime] "Sat Jul 27 15:28:23 2019"
+[dumpfile_size] 21368832
+[savefile] "/home/ericson/Dropbox/MAESTRIA/MSE/bim3/SDC/cocotb_cordic/cordic_sim.gtkw"
+[timestart] 0
+[size] 1920 1016
+[pos] -39 -39
+*-27.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] cordic_tb.
+[treeopen] cordic_tb.uut.
+[sst_width] 228
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 285
+@28
+cordic_tb.uut.clk
+cordic_tb.uut.en_i
+cordic_tb.uut.en_ii
+cordic_tb.uut.is_busy
+cordic_tb.uut.rst
+@22
+cordic_tb.uut.x_i[15:0]
+cordic_tb.uut.y_i[15:0]
+cordic_tb.uut.z_i[15:0]
+cordic_tb.uut.zt_o[15:0]
+@28
+cordic_tb.uut.cord.result_valid
+@29
+cordic_tb.dv_o
+[pattern_trace] 1
+[pattern_trace] 0
