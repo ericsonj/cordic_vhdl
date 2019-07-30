@@ -1,13 +1,21 @@
-all: cordic_tb
+export COCOTB_REDUCED_LOG_FMT
+export PYTHONPATH:=$(realpath tests):$(PYTHONPATH)
 
-cordic_tb: Cordic.vhd cordic_iter.vhd Cordic_tb.vhd
-	ghdl -a cordic_core.vhd
-	ghdl -a Cordic.vhd
-	ghdl -a Cordic_tb.vhd
-	ghdl -e cordic_tb
+LANG=vhdl
+SIM=ghdl
 
-cordic_tb.vcd: cordic_tb
-	ghdl -r cordic_tb --vcd=cordic_tb.vcd
+VHDL_SOURCES= $(PWD)/cordic_core.vhd $(PWD)/cordic.vhd
 
-clean:
-	rm -f *.o *.cf cordic_tb *.vcd
+TOPLEVEL=cordic
+
+SIM_ARGS= --wave=fsm_cmd.ghw
+MODULE ?= test
+
+COCOTB=$(shell cocotb-config --makefiles)
+include $(COCOTB)/Makefile.inc
+include $(COCOTB)/Makefile.sim
+
+GTK_SAVEFILE := $(wildcard sim_build/*.gtkw)
+
+gtkwave:
+	gtkwave sim_build/fsm_cmd.ghw $(GTK_SAVEFILE)

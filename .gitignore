@@ -1,3 +1,6 @@
 *.o
 *.cf
 cordic_tb
+build/
+sim_build/
+tests/__pycache__/

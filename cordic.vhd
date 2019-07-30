@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity cordic is
   generic(
     N : natural := 16; --Ancho de la palabra
-    ITER : natural := 16);--Numero de iteraciones
+    ITER : natural := 12);--Numero de iteraciones
   port(
     clk : in std_logic;
     rst : in std_logic;
